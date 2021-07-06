@@ -1,0 +1,9 @@
+<div style="height:calc(100% - 56px);" class="my-5 py-5" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card>
+    <mat-card-title>Mon compte</mat-card-title>
+    <mat-card-content *ngIf="currentUser;" fxLayout="column" fxLayoutGap="15px">
+      <div> Email: {{ currentUser.email }}</div>
+      <div> Name: {{ currentUser.name }}</div>
+    </mat-card-content>
+  </mat-card>
+</div>

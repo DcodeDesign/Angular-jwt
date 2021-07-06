@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <span class="link" routerLink="/">Mon Logo</span>
+  <span fxFlex="auto"></span>
+  <span fxLayoutGap="15px" *ngIf="!jwToken.isAuthenticated">
+     <span class="link" routerLink="/signin">Connexion</span>
+     <span class="link" routerLink="/signup">inscription</span>
+  </span>
+  <span *ngIf="jwToken.isAuthenticated" fxLayoutGap="15px" fxLayout="row" fxLayoutAlign="center center">
+    <span class="link" routerLink="/profile">Mon compte</span>
+   <mat-icon class="link" (click)="logout()">logout</mat-icon>
+  </span>
+
+</mat-toolbar>
